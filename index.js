@@ -15,7 +15,7 @@ app.use(express.json());
 
 app.post("/webhook", (req, res) => {
   const repo = req.body.repository.full_name;
-  const conf = config.repos[repo];
+  const conf = config[repo];
   if (!conf) {
     return res.status(403).send("Repository unknown");
   }
@@ -33,8 +33,7 @@ app.post("/webhook", (req, res) => {
     },
   };
 
-  console.log(event);
-  console.log(req.body);
+  console.log(`${repo} ${event}`);
 
   if (event === "deployment") {
     const branch = branchByRef(req.body.deployment.ref);

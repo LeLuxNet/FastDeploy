@@ -1,14 +1,12 @@
 {
-  "repos": {
-    "ginnyTheCat/Test": {
-      "secret": "abcde",
-      "branches": {
-        "master": {
-          "on": ["push"],
-          "path": "test"
-        }
-      },
-      "token": "GitHub AccessToken here"
-    }
+  "ginnyTheCat/Test": {
+    "secret": "abcde",
+    "branches": {
+      "master": {
+        "on": ["push"],
+        "path": "test"
+      }
+    },
+    "token": "GitHub AccessToken here"
   }
 }
