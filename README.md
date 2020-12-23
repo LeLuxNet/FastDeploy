@@ -4,20 +4,24 @@
 
 ### Access
 
-The first step is to make sure the account whose private token is set as the `token` in `config.json` has access to the repository.
+The first step is to make sure the account whose private token is set as the `token` in the `config.json` has access to the repository.
 
-For personal repositories just add his as a contributor. Make sure you accepted the invite.
+For personal repositories just add him as a contributor. Make sure you accepted the invite.
 
 For organisations add him as a member.
 
 ### Webhook
 
-Now open the repo settings. Then go to `Settings` > `Webhooks` > `Add webhook`.
+Now open the repository settings. Then go to `Settings` > `Webhooks` > `Add webhook`.
 
 Insert the FastDeploy API Endpoint + `/webhook` in the `Payload URL` field. This is in our case `https://api.lelux.net/fastdeploy/webhook`.
 
-Now select `application/json` in the `Content Type` dropdown menu.
+Select `application/json` in the `Content Type` dropdown menu.
 
-The secret you have to insert in the `Secret` field has to match the `secret` field in the `config.json` file. This value may be given to you by the server administrator.
+Insert the `secre` from the `config.json` into the `Secret` field. This value may be given to you by the server administrator.
 
-After selecting `Send me everything.` and making sure the checkbox near `Active` is checked you can finally add the webhook.
+Select `Send me everything.`.
+
+Make sure the checkbox near `Active` is checked.
+
+Click `Add webhook`.
